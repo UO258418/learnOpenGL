@@ -1,12 +1,12 @@
+package chapter2;
+
+import main.GLBase;
+
 import static org.lwjgl.opengl.GL11.*;
 
-public class Main extends GLBase {
+public class Example2_1 extends GLBase {
 
-    public static void main(String... args) {
-        new Main().run();
-    }
-
-    public Main() {
+    public Example2_1() {
         super("SIMPLE", 800, 600, false);
     }
 

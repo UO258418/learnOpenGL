@@ -1,4 +1,6 @@
-import org.lwjgl.LWJGLException;
+package main;
+
+import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.ContextAttribs;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
@@ -17,7 +19,7 @@ public abstract class GLBase {
         try {
             Display.setFullscreen(true);
             Display.setVSyncEnabled(vsync);
-        } catch (LWJGLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -35,7 +37,7 @@ public abstract class GLBase {
 
         try {
             Display.setDisplayMode(new DisplayMode(width, height));
-        } catch (LWJGLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -52,7 +54,7 @@ public abstract class GLBase {
     /**
      * Runs the application with the given context attributes and the default pixel format
      *
-     * @param contextAttribs
+     * @param contextAttribs The attributes for the OpenGL context
      */
     public final void run(ContextAttribs contextAttribs) {
         run(new PixelFormat(), contextAttribs);
@@ -81,22 +83,38 @@ public abstract class GLBase {
             System.exit(1);
         }
 
-        gameLoop(); // start the application loop
+        mainLoop(); // start the application loop
     }
 
     /**
-     * Main application loop
+     * main.Main application loop
      */
-    private void gameLoop() {
+    private void mainLoop() {
         try {
             init(); // initialize
 
             resize(); // set the viewport to its proper size
 
+            long lastTime, deltaTime;
+            lastTime = System.nanoTime();
+
             while(!shouldTerminate()) {
+                deltaTime = System.nanoTime() - lastTime;
+                lastTime += deltaTime;
+
                 if(Display.wasResized()) {
                     resize(); // if the window was resized
                 }
+
+                // process keyboard events
+                while(Keyboard.next()) {
+                    if(Keyboard.getEventKeyState())
+                        keyPressed(Keyboard.getEventKey(), Keyboard.getEventCharacter());
+                    else
+                        keyReleased(Keyboard.getEventKey(), Keyboard.getEventCharacter());
+                }
+
+                update(deltaTime);
 
                 render(); // perform render operations
 
@@ -131,7 +149,7 @@ public abstract class GLBase {
     /**
      * Resizes the viewport
      */
-    private void resize() {
+    public void resize() {
         glViewport(0, 0, getWidth(), getHeight());
     }
 
@@ -141,7 +159,7 @@ public abstract class GLBase {
      * @return Whether the application should terminate or not
      */
     private boolean shouldTerminate() {
-        return Display.isCloseRequested();
+        return Display.isCloseRequested() || Keyboard.isKeyDown(Keyboard.KEY_ESCAPE);
     }
 
     /**
@@ -157,6 +175,30 @@ public abstract class GLBase {
     private void updateDisplay() {
         Display.update();
     }
+
+    /**
+     * Called when a key has been pressed.
+     *
+     * @param key The @see org.lwjgl.input.Keyboard keycode of the pressed key.
+     * @param c The literal character of the pressed key.
+     */
+    public void keyPressed(int key, char c) {}
+
+    /**
+     * Called when a key has been released.
+     *
+     * @param key The @see org.lwjgl.input.Keyboard keycode of the released key.
+     * @param c The literal character of the released key.
+     */
+    public void keyReleased(int key, char c) {}
+
+    /**
+     * Called once per frame and given the elapsed time since the last call
+     * to this method.
+     *
+     * @param deltaTime The elapsed time since the last call to this method, in nanoseconds.
+     */
+    public void update(long deltaTime) {}
 
     /**
      * Initialization setup
