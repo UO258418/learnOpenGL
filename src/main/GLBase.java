@@ -95,11 +95,10 @@ public abstract class GLBase {
 
             resize(); // set the viewport to its proper size
 
-            long lastTime, deltaTime;
-            lastTime = System.nanoTime();
+            long lastTime = System.nanoTime();
 
             while(!shouldTerminate()) {
-                deltaTime = System.nanoTime() - lastTime;
+                long deltaTime = System.nanoTime() - lastTime;
                 lastTime += deltaTime;
 
                 if(Display.wasResized()) {
