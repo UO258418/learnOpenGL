@@ -7,7 +7,7 @@ import static org.lwjgl.opengl.GL11.*;
 public class Example2_2 extends GLBase {
 
     public Example2_2() {
-        super("chapter2.Example2_2", 600, 600, true);
+        super("Example2.2", 600, 600, true);
     }
 
     @Override

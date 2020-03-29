@@ -22,7 +22,7 @@ public class Example2_3 extends GLBase {
     long ellapsed, delay = TimeUnit.MILLISECONDS.toNanos(33);
 
     public Example2_3() {
-        super("chapter2.Example2_3", 600, 600, true);
+        super("Example2.3", 600, 600, true);
     }
 
     @Override

@@ -1,11 +1,11 @@
 package main;
 
-import chapter2.*;
+import practices.TerrainGenerator;
 
 public class Main {
 
     public static void main(String... args) {
-        new Example2_3().run();
+        new TerrainGenerator(50, 31, 20).run();
     }
 
 }

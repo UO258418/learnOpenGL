@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b29169b0-3f9c-436f-9be3-5122db73ae9d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter2/Example2_3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GLBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GLBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/Example2_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/Example2_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter2/Example2_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter2/Example2_3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,23 +33,26 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/practices" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Alejandro\Desktop\Repos\LearnOpenGL\lib" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="chapter2" />
-      <recent name="" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Alejandro\Desktop\Repos\LearnOpenGL\lib\native" />
       <recent name="C:\Users\Alejandro\Desktop\Repos\LearnOpenGL\lib\jar" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="practices" />
+      <recent name="chapter3" />
+      <recent name="chapter2" />
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alejandro\Desktop\Repos\LearnOpenGL\src\practices" />
+      <recent name="C:\Users\Alejandro\Desktop\Repos\LearnOpenGL\lib" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -117,10 +121,14 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="294" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585373863737" />
-    <state x="645" y="234" key="#com.intellij.ide.util.MemberChooser" timestamp="1585369697790">
+    <state x="645" y="234" key="#com.intellij.ide.util.MemberChooser" timestamp="1585473553776">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="645" y="234" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1585369697790" />
+    <state x="645" y="234" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1585473553776" />
+    <state x="570" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585474539978">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="570" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585474539978" />
     <state x="481" y="119" key="CommitChangelistDialog2" timestamp="1585377419037">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -129,22 +137,38 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="641" y="347" key="FileChooserDialogImpl/0.0.1680.1050@0.0.1680.1050" timestamp="1585095366194" />
-    <state width="1637" height="191" key="GridCell.Tab.0.bottom" timestamp="1585380352341">
+    <state width="1637" height="191" key="GridCell.Tab.0.bottom" timestamp="1585477223897">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1637" height="191" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585380352341" />
-    <state width="1637" height="191" key="GridCell.Tab.0.center" timestamp="1585380352341">
+    <state width="1637" height="191" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585477223897" />
+    <state width="1637" height="191" key="GridCell.Tab.0.center" timestamp="1585477223897">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1637" height="191" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585380352341" />
-    <state width="1637" height="191" key="GridCell.Tab.0.left" timestamp="1585380352341">
+    <state width="1637" height="191" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585477223897" />
+    <state width="1637" height="191" key="GridCell.Tab.0.left" timestamp="1585477223896">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1637" height="191" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585380352341" />
-    <state width="1637" height="191" key="GridCell.Tab.0.right" timestamp="1585380352341">
+    <state width="1637" height="191" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585477223896" />
+    <state width="1637" height="191" key="GridCell.Tab.0.right" timestamp="1585477223897">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1637" height="191" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585380352341" />
+    <state width="1637" height="191" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585477223897" />
+    <state width="1637" height="351" key="GridCell.Tab.1.bottom" timestamp="1585394751547">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1637" height="351" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585394751547" />
+    <state width="1637" height="351" key="GridCell.Tab.1.center" timestamp="1585394751547">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1637" height="351" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585394751547" />
+    <state width="1637" height="351" key="GridCell.Tab.1.left" timestamp="1585394751547">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1637" height="351" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585394751547" />
+    <state width="1637" height="351" key="GridCell.Tab.1.right" timestamp="1585394751547">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1637" height="351" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585394751547" />
     <state x="341" y="167" key="SettingsEditor" timestamp="1585096249482">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -153,10 +177,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="432" y="258" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1585377423999" />
-    <state x="535" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1585368108713">
+    <state x="535" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1585456832058">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="535" y="349" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585368108713" />
+    <state x="535" y="349" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585456832058" />
     <state x="503" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1585094837958">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
